@@ -21,19 +21,21 @@ class PokeInfo extends StatelessWidget {
       ),
       child: Padding(
         padding: const EdgeInsets.all(10),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            _buildInformationRow("Name", pokemon.name),
-            _buildInformationRow("Height", pokemon.height),
-            _buildInformationRow("Weight", pokemon.weight),
-            _buildInformationRow("Spawn Time", pokemon.spawnTime),
-            _buildInformationRow("Weakness", pokemon.weaknesses.toString()),
-            _buildInformationRow(
-                "Pre Evolution", pokemon.prevEvolution.toString()),
-            _buildInformationRow(
-                "Next Evolution", pokemon.nextEvolution.toString()),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              _buildInformationRow("Name", pokemon.name),
+              _buildInformationRow("Height", pokemon.height),
+              _buildInformationRow("Weight", pokemon.weight),
+              _buildInformationRow("Spawn Time", pokemon.spawnTime),
+              _buildInformationRow("Weakness", pokemon.weaknesses.toString()),
+              _buildInformationRow(
+                  "Pre Evolution", pokemon.prevEvolution.toString()),
+              _buildInformationRow(
+                  "Next Evolution", pokemon.nextEvolution.toString())
+            ],
+          ),
         ),
       ),
     );
